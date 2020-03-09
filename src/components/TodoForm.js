@@ -1,12 +1,12 @@
 import React from 'react';
 
-class TodoForm extends React.component {
+class TodoForm extends React.Component {
     constructor() {
         super();
         this.state = {
             task: '',
         };
-    };
+    }
 
 handleChanges = event => {
     this.setState({ [event.target.name]: event.target.value });
@@ -14,7 +14,7 @@ handleChanges = event => {
 
 submitTask = event => {
     event.preventDefault();
-    this.PaymentResponse.addTask(event, this.state.task);
+    this.props.addTask(event, this.state.task);
 };
 
 render() {
@@ -23,7 +23,7 @@ render() {
         <input type='text' name='task' onChange={this.handleChanges} />
         <button>Add Task</button>
         </form>
-    )
+    );
   }
 }
 

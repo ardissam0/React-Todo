@@ -5,30 +5,30 @@ import TodoForm from './components/TodoForm';
 const theTasks = [
   {
     task: 'Clean Basement',
-    id: 125783948575,
+    id: 1528817077286,
     completed: false
   },
   {
     task: 'Cook Dinner',
-    id: 125783988888,
+    id: 1528817084358,
     completed: false
   },
   {
     task: 'Do Laundry',
-    id: 1257839476543,
+    id: 1528817072048,
     completed: false
   },
   {
     task: 'Hit The Gym',
-    id: 1257839445670,
+    id: 1528817000912,
     completed: false
-  },
-]
+  }
+];
 
 class App extends React.Component {
   // you will need a place to store your state in this component.
   constructor () {
-    SourceBuffer();
+    super();
     this.state = {
       theTasks
     };
@@ -45,7 +45,7 @@ class App extends React.Component {
     };
 
     this.setState({
-      toDoTasks: [...this.state.theTasks, newTask]
+      theTasks: [...this.state.theTasks, newTask]
     });
   };
 
