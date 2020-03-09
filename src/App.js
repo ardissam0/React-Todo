@@ -1,7 +1,14 @@
 import React from 'react';
 import TodoList from './components/TodoList';
 import TodoForm from './components/TodoForm';
+import styled from 'styled-components';
 
+
+const TaskStyles= styled.div`
+  background-color: lightgrey;
+  width: 188px;
+  padding: 3%;
+`;
 const theTasks = [
   {
     task: 'Clean Basement',
@@ -80,12 +87,15 @@ clearCompleted = event => {
         <h2>Welcome to your Todo App!</h2>
         <TodoForm addTask={this.addTask} />
       </div>
+      <TaskStyles>
       <TodoList
       theTasks={this.state.theTasks}
       toggleTask={this.toggleTask}
       clearCompleted={this.clearCompleted}
       />
+      </TaskStyles> 
       </div>
+    
     );
   }
 }
