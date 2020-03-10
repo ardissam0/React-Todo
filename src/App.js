@@ -2,13 +2,17 @@ import React from 'react';
 import TodoList from './components/TodoList';
 import TodoForm from './components/TodoForm';
 import styled from 'styled-components';
+import './components/Todo.css';
 
 
 const TaskStyles= styled.div`
-  background-color: lightgrey;
-  width: 188px;
+  background-color: #9DA9CC;
+  width: 40%;
   padding: 3%;
+  margin-top: 2%;
+  border: 5px solid #3C4D80;
 `;
+
 const theTasks = [
   {
     task: 'Clean Basement',
@@ -59,8 +63,9 @@ class App extends React.Component {
   toggleTask = taskId => {
 
     this.setState({
+    //map over tasks
       theTasks: this.state.theTasks.map(task => {
-
+  
       if (taskId === task.id) {
         return {
           ...task,
@@ -74,6 +79,7 @@ class App extends React.Component {
 };
 
 clearCompleted = event => {
+  //function to clear completed tasks
   event.preventDefault();
   this.setState({
     theTasks: this.state.theTasks.filter(task => task.completed === false)
@@ -82,20 +88,19 @@ clearCompleted = event => {
 
   render() {
     return (
+      <TaskStyles>
       <div>
-      <div>
+      <div className='top'>
         <h2>Welcome to your Todo App!</h2>
         <TodoForm addTask={this.addTask} />
       </div>
-      <TaskStyles>
       <TodoList
       theTasks={this.state.theTasks}
       toggleTask={this.toggleTask}
       clearCompleted={this.clearCompleted}
       />
-      </TaskStyles> 
       </div>
-    
+      </TaskStyles>
     );
   }
 }
