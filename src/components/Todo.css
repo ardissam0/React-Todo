@@ -1,0 +1,19 @@
+.completed {
+    text-decoration: line-through;
+}
+
+button {
+    border: 3px solid #3C4D80;
+    background-color: #9DA9CC;
+    margin-left: 2px;
+}
+
+button:hover {
+    color: #9DA9CC;
+    background-color: #3C4D80;
+    font-weight: bold;
+}
+
+.top {
+   color: #3C4D80;
+}
