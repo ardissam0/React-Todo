@@ -6,31 +6,27 @@ import './components/Todo.css';
 
 
 const TaskStyles= styled.div`
-  background-color: #9DA9CC;
+  margin-left: 28%;
+  margin-right: 28%;
+  background-color: darkslategrey;
   width: 40%;
-  padding: 3%;
-  margin-top: 2%;
-  border: 5px solid #3C4D80;
+  padding: 30px;
+  margin-top: 5%;
 `;
 
 const theTasks = [
   {
-    task: 'Clean Basement',
-    id: 1528817077286,
-    completed: false
-  },
-  {
-    task: 'Cook Dinner',
+    task: 'Cook',
     id: 1528817084358,
     completed: false
   },
   {
-    task: 'Do Laundry',
+    task: 'Laundry',
     id: 1528817072048,
     completed: false
   },
   {
-    task: 'Hit The Gym',
+    task: 'Workout',
     id: 1528817000912,
     completed: false
   }
@@ -91,7 +87,7 @@ clearCompleted = event => {
       <TaskStyles>
       <div>
       <div className='top'>
-        <h2>Welcome to your Todo App!</h2>
+        <h2 style = {{textAlign: 'center'}}>Todo List</h2>
         <TodoForm addTask={this.addTask} />
       </div>
       <TodoList

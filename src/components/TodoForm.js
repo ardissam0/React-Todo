@@ -23,7 +23,7 @@ render() {
     return (
         <form onSubmit={this.submitTask}>
         <input type='text' name='task' onChange={this.handleChanges} />
-        <button>Add Task</button>
+        <button style = {{fontWeight: 'bold',}}>Add Task</button>
         </form>
     );
   }
