@@ -1,19 +1,30 @@
+
+
 .completed {
     text-decoration: line-through;
 }
 
 button {
-    border: 3px solid #3C4D80;
-    background-color: #9DA9CC;
+    border: 1.25px solid white;
+    background-color: white;
     margin-left: 2px;
+    font-weight: bold;
+    cursor: pointer;
+    color: darkslategrey;
 }
 
 button:hover {
-    color: #9DA9CC;
-    background-color: #3C4D80;
+    color: white;
+    background-color: darkslategrey;
     font-weight: bold;
 }
 
 .top {
-   color: #3C4D80;
+   color: white;
+}
+
+.Todo {
+    font-weight: bold;
+    cursor: pointer;
+    color: white;
 }

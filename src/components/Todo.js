@@ -1,13 +1,5 @@
 import React from 'react';
-import styled from 'styled-components';
 import './Todo.css';
-
-
-const TaskStyles= styled.div`
-  background-color: #9DA9CC;
-  width: 180px;
-  padding: 2%;
-`;
 
 const Todo = props => {
     console.log(props);
